@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZedPe </title>
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-light border-bottom">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <!-- Logo Left -->
+      <a class="navbar-brand" href="#">
+        <img src="https://zed.pe/assets/newfront/img/logo.png" alt="Zedpe Logo" width="80" height="50">
+      </a>
+
+      <!-- Mobile Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav Center + Right -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Center Nav -->
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Giving</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Proud</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Pro collection</a></li>
+        </ul>
+
+        <!-- Right Side -->
+        <form class="d-flex me-3">
+          <input class="form-control me-2" type="search" placeholder="Search here" aria-label="Search">
+        </form>
+        <a class="nav-link" href="#">Cart (0)</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+  <!-- Main -->
+  <main class="">
+    <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-2 bg-transparent p-0">
+                <li class="breadcrumb-item"><a href="#" class="text-black">Home</a></li>
+                <li class="breadcrumb-item"><a href="#" class="text-dark">All Collection</a></li>
+                <li class="breadcrumb-item active text-black">Products</li>
+            </ol>
+            </nav>
+            <div class="breadcrumb-area mb-2 text-white d-flex align-items-center" 
+            style="background: url('https://images.unsplash.com/photo-1747582439467-5bcdbb955633?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center / cover; min-height: 200px;">
+             <div class="container">
+            
+            <h2 class="page-title text-black text-center mb-0">
+            Shop environment <br>
+            friendly quality goods
+            </h2>
+           </div>
+       </div>
+    <div class="container">   
+      <!-- Category filter -->  
+    <div class="category d-flex align-items-center justify-content-between mb-3">
+    <ul class="nav nav-pills d-flex flex-wrap">
+        <li class="nav-item"><a class="nav-link active" href="#" data-filter="all">All Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-filter="men's clothing">Men</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-filter="women's clothing">Women</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-filter="jewelery">Jewelery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-filter="electronics">Electronics</a></li>
+    </ul>
+    <div class="sort-filter-options d-lg-none">
+        <select class="form-select form-select-sm me-2" id="sortBy">
+        <option value="default">Sort by</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        </select>
+        <button class="btn btn-outline-secondary btn-sm" id="filterBtn">Filters</button>
+    </div>
+    <button class="btn btn-outline-secondary btn-sm d-none d-lg-inline" id="refreshBtn">Filter</button>
+    </div>
+
+      <!-- Products Grid -->
+      <div id="productsGrid" class="row g-3 d-none d-lg-flex">
+        <!-- desktop cards go here -->
+      </div>
+
+      <!-- Products List -->
+      <div id="mobileList" class="d-lg-none">
+        <!-- mobile cards go here -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+   <footer class="bg-light border-top mt-5">
+    <div class="container py-5">
+        <div class="row">
+        
+        <!-- Logo & About -->
+        <div class="col-md-3 mb-4">
+            <a href="#">
+            <img src="https://zed.pe/assets/newfront/img/logo.png" alt="Zedpe Logo" width="120" class="mb-3">
+            </a>
+            <p class="text-muted">
+            Helping you find reliable products for your business with trust and quality.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-3 mb-4">
+            <h5 class="fw-bold mb-3">Quick Links</h5>
+            <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-muted">Home</a></li>
+            <li><a href="#" class="text-decoration-none text-muted">About</a></li>
+            <li><a href="#" class="text-decoration-none text-muted">Shop</a></li>
+            <li><a href="#" class="text-decoration-none text-muted">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-md-3 mb-4">
+            <h5 class="fw-bold mb-3">Services</h5>
+            <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-muted">Product Sourcing</a></li>
+            <li><a href="#" class="text-decoration-none text-muted">Consulting</a></li>
+            <li><a href="#" class="text-decoration-none text-muted">Business Solutions</a></li>
+            <li><a href="#" class="text-decoration-none text-muted">Support</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-md-3 mb-4">
+            <h5 class="fw-bold mb-3">Contact</h5>
+            <ul class="list-unstyled text-muted">
+            <li>Email: <a href="mailto:info@zedpe.com" class="text-decoration-none text-muted">info@zedpe.com</a></li>
+            <li>Phone: <a href="tel:+919876543210" class="text-decoration-none text-muted">+91 98765 43210</a></li>
+            <li>Address: Gurugram, India</li>
+            </ul>
+        </div>
+
+        </div>
+        <div class="border-top pt-3 mt-3 text-center">
+        <small class="text-muted">© <span id="year"></span> ZedPe. All rights reserved.</small>
+        </div>
+    </div>
+   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // GSAP Animations
+    document.addEventListener('DOMContentLoaded', () => {
+      // Header animation
+      gsap.from('header', {
+        opacity: 0,
+        y: -50,
+        duration: 1,
+        ease: 'power2.out'
+      });
+
+      // Navbar links animation
+      gsap.from('.navbar-nav .nav-link', {
+        opacity: 0,
+        x: -20,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: 'power2.out',
+        delay: 0.5
+      });
+
+      // Breadcrumb animation
+      gsap.from('.breadcrumb-item', {
+        opacity: 0,
+        y: 20,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: 'power2.out',
+        delay: 1
+      });
+
+      // Page title animation
+      gsap.from('.page-title', {
+        opacity: 0,
+        scale: 0.8,
+        duration: 1,
+        ease: 'back.out(1.7)',
+        delay: 1.2
+      });
+
+      // Category filter animation
+      gsap.from('.nav-pills .nav-link', {
+        opacity: 0,
+        y: 20,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: 'power2.out',
+        delay: 1.5
+      });
+
+      // Footer animation
+      gsap.from('footer', {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: 'footer',
+          start: 'top 80%'
+        }
+      });
+
+      // Footer columns animation
+      gsap.from('.col-md-3', {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: 'footer',
+          start: 'top 80%'
+        }
+      });
+    });
+  </script>
+</body>
+</html>

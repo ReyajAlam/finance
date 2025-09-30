@@ -1,0 +1,148 @@
+
+:root {
+  --card-radius: 18px;
+  --bg-breadcrumb: #f5f7f6;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  background: #eef2ef;
+  color: #222;
+}
+
+.logo-img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: white;
+  padding: 6px;
+}
+.site-title { font-size: 1.2rem; font-weight: 800; }
+.category .nav-pills{
+    --bs-nav-pills-link-active-color: none; 
+    --bs-nav-pills-link-active-bg: none;
+    --bs-nav-pills-link-active-color: none;
+}
+.category .nav{
+   --bs-nav-link-disabled-color: none;
+   --bs-nav-link-color: none;
+}
+.breadcrumb-area {
+  background: var(--bg-breadcrumb);
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+}
+
+/* Product card desktop (no change) */
+.product-card {
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.product-image-wrapper {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+  border-radius: 12px;
+}
+.product-image-wrapper img {
+  max-height: 100%;
+  object-fit: contain;
+}
+.product-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+.price-badge { font-weight: 700; }
+
+
+.mobile-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 12px;
+  display: block;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+  position: relative;
+}
+.mobile-card .product-image-wrapper {
+  height: 200px;
+  background: #fafafa;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-card .product-image-wrapper img {
+  max-height: 100%;
+  object-fit: contain;
+}
+.mobile-card h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #222;
+}
+.mobile-card .text-muted {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+.mobile-card .product-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.mobile-card .price-badge {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.mobile-card .btn {
+  padding: 5px 15px;
+  font-size: 0.9rem;
+}
+.mobile-card .added-to-cart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #28a745;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+
+.category-filter {
+  flex-wrap: wrap;
+}
+.sort-filter-options {
+  display: none;
+}
+@media (max-width: 992px) { 
+  .sort-filter-options {
+    display: flex;
+    gap: 5px;
+  }
+  #refreshBtn {
+    display: none;
+  }
+  .nav-pills {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .nav-pills .nav-link {
+    white-space: nowrap;
+  }
+}
